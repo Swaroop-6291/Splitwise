@@ -6,6 +6,8 @@ import Dashboard from "./components/Dashboard";
 import Register from "./components/Register";
 import Home from "./pages/Home";
 import {AddTransaction} from "./components/AddTransaction";
+import Report from "./pages/Report";
+import Transaction from "./components/Transaction";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
         {/* Protected Route */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/add-transaction" element={<AddTransaction />} />
+        <Route path="/reports" element={<Report />} />
+        <Route path="/transactions" element={<Transaction />} />
 
         {/* Page Not Found */}
         <Route path="*" element={<h2>404 - Page Not Found</h2>} />

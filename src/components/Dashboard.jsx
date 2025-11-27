@@ -65,6 +65,9 @@ const Dashboard = ()=> {
         <Link to="/reports" className="dash-btn report-btn">
           View Reports 📈
         </Link>
+        <Link to="/transactions" className="dash-btn history-btn">
+            View Transaction History 📄
+        </Link>
       </motion.div>
     </motion.div>
   );

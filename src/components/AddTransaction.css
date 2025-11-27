@@ -24,16 +24,13 @@
   padding: 35px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* updated */
-  justify-content: center;
+  
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 .add-input {
   width: 100%;
-  
+  margin-left: auto;
   padding: 12px;
   margin-top: 12px;
   border-radius: 10px;
