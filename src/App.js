@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
+
+import Register from "./components/Register";
+import Home from "./pages/Home";
+import {AddTransaction} from "./components/AddTransaction";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+
+        {/* Public Routes */}
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
+        {/* Protected Route */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/add-transaction" element={<AddTransaction />} />
+
+        {/* Page Not Found */}
+        <Route path="*" element={<h2>404 - Page Not Found</h2>} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
