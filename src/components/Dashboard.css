@@ -1,6 +1,6 @@
 .dash-wrapper {
   min-height: 100vh;
-  background: linear-gradient(135deg, red, #f81c53, #fc2f62, rgb(0, 247, 255), blue);
+  background: linear-gradient(135deg, red, #f81c53, #dc52ff);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,6 +36,7 @@
   backdrop-filter: blur(8px);
   box-shadow: 0 6px 25px rgba(0,0,0,0.25);
   transition: 0.3s ease-in-out;
+  
 }
 
 .dash-card:hover {
@@ -101,7 +102,7 @@
 /* Button Colors */
 .add-btn {
   background: #00f7ff;
-  margin-top: 0%;
+  
 }
 
 .report-btn {

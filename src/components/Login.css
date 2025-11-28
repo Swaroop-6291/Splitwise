@@ -1,7 +1,7 @@
 /* Wrapper */
 .login-wrapper {
   min-height: 100vh;
-  background: linear-gradient(135deg,red, #f81c53,#fc2f62,rgb(0, 247, 255),blue);
+  background: linear-gradient(135deg, red, #f81c53, #dc52ff);
   
   display: flex;
   flex-direction: column;
@@ -12,6 +12,50 @@
 }
 
 /* Form Card */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card-border {
+  position: relative;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.card-border::after,
+.card-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: conic-gradient(from var(--angle), transparent, red, blue);
+  z-index: -1;
+  border-radius: 20px;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  animation: spin 4s linear infinite;
+}
+
+.card-border::before {
+  filter: blur(1.5rem);
+  opacity: 0.7;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
 .login-form {
   width: 100%;
   max-width: 420px;

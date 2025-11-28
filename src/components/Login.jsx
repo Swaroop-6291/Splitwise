@@ -17,7 +17,8 @@ function Login() {
   };
 
   return (
-    <motion.div
+   
+        <motion.div
       className="login-wrapper"
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
@@ -32,7 +33,8 @@ function Login() {
         Welcome Back 👋
       </motion.h2>
 
-      <form className="login-form" onSubmit={handleLogin}>
+    
+        <form className="login-form" onSubmit={handleLogin}>
         <input
           type="email"
           placeholder="Enter Email"
@@ -62,7 +64,9 @@ function Login() {
           </Link>
         </p>
       </form>
+      
     </motion.div>
+   
   );
 }
 
