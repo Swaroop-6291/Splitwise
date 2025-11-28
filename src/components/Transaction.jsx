@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import "./Transaction.css";
+import { useNavigate } from "react-router-dom";
 
 const Transaction = () => {
   // Dummy Data (replace with backend data later)
@@ -9,7 +10,7 @@ const Transaction = () => {
     { id: 2, type: "Income", category: "Salary", amount: 50000, date: "2025-03-05" },
     { id: 3, type: "Expense", category: "Transport", amount: 120, date: "2025-03-06" },
   ]);
-
+  const navigate=useNavigate();
   const handleDelete = (id) => {
     setTransactions(transactions.filter((t) => t.id !== id));
   };
@@ -43,7 +44,7 @@ const Transaction = () => {
                 <td>{txn.category}</td>
                 <td>₹{txn.amount}</td>
                 <td>
-                  <button className="edit-btn">Edit</button>
+                  <button className="edit-btn" onClick={() => navigate(`/edit-transaction/${txn.id}`)}>Edit</button>
                   <button className="delete-btn" onClick={() => handleDelete(txn.id)}>
                     Delete
                   </button>

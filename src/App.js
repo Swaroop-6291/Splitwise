@@ -9,6 +9,7 @@ import {AddTransaction} from "./components/AddTransaction";
 import Report from "./pages/Report";
 import Transaction from "./components/Transaction";
 import Header from "./components/Hearder";
+import EditTransaction from "./components/EditTransaction";
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
         <Route path="/add-transaction" element={<AddTransaction />} />
         <Route path="/reports" element={<Report />} />
         <Route path="/transactions" element={<Transaction />} />
-
+        <Route path="/edit-transaction/:id" element={<EditTransaction />} />
         {/* Page Not Found */}
         <Route path="*" element={<h2>404 - Page Not Found</h2>} />
 
