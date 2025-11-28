@@ -1,6 +1,7 @@
 .history-wrapper {
   min-height: 100vh;
-  background: linear-gradient(135deg, red, #f81c53, #fc2f62, rgb(0, 247, 255), blue);
+  background: linear-gradient(135deg,red, #f81c53,#fc2f62,rgb(0, 247, 255),blue);
+  
   padding: 40px;
   font-family: "Poppins", sans-serif;
   color: #fff;

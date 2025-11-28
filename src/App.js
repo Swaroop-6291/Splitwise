@@ -8,10 +8,12 @@ import Home from "./pages/Home";
 import {AddTransaction} from "./components/AddTransaction";
 import Report from "./pages/Report";
 import Transaction from "./components/Transaction";
+import Header from "./components/Hearder";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Header/>
       <Routes>
 
         {/* Public Routes */}
